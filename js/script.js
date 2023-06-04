@@ -1,13 +1,17 @@
 
 var letter = function(Names){
-    for(var i = 0; i < Names.length; i++)
-        if(Names[i][0] == "j" || Names[i][0] == "J")
-            console.log("Goodbye " + Names[i])
-        else
-            console.log("Hello " + Names[i])
+        
+        for (var i = 0; i < Names.length; i++) {
+            var firstLetter = Names[i].charAt(0).toLowerCase();
+            if (firstLetter === 'j') {
+                byeSpeaker.speak(Names[i]);
+            } else {
+                helloSpeaker.speak(Names[i]);
+            }
+        };
 }
 
-Name = ["JSome", "json", "HTML", "CSS"]
+var Names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
 
 // console.log(Name)
-console.log(letter(Name))
+console.log(letter(Names))
